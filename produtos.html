@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Produtos - D2G TECH</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="produtos.css" />
+</head>
+<body class="products-page">
+  <header>
+    <div class="logo">D2G TECH</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li class="active-nav"><a href="produtos.html">Produtos</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="products-header">
+      <h1>Nossos Produtos</h1>
+      <p>Tecnologia de ponta para impulsionar seu dia a dia.</p>
+    </div>
+
+    <div class="filtro-container">
+      <label for="ordenar-produtos">Ordenar por:</label>
+      <select id="ordenar-produtos" name="ordenar-produtos">
+        <option value="padrao">Padrão</option>
+        <option value="menor-preco">Menor Preço</option>
+        <option value="maior-preco">Maior Preço</option>
+      </select>
+    </div>
+
+    <div class="products-grid">
+        <div class="product-card" data-price="59.90" data-order="1">
+            <div class="product-card-img"><img src="./images/KZ PNG.png" alt="KZ EDX Pro" /></div>
+            <div class="product-card-content">
+                <h3 class="product-card-name">Kz Edx Pro - Sem Microfone</h3>
+                <p class="product-card-price">R$ 59,90</p>
+                <a href="#" class="btn">Ver Detalhes</a>
+            </div>
+        </div>
+        <div class="product-card" data-price="109.90" data-order="2">
+            <div class="product-card-img"><img src="./images/KZ PNG (1).png" alt="Carregador Power Bank" /></div>
+            <div class="product-card-content">
+                <h3 class="product-card-name">Carregador Power Bank 10.000mah</h3>
+                <p class="product-card-price">R$ 109,90</p>
+                <a href="#" class="btn">Ver Detalhes</a>
+            </div>
+        </div>
+        <div class="product-card" data-price="29999.00" data-order="3">
+            <div class="product-card-img"><img src="./images/vision-pro.png" alt="Apple Vision Pro" /></div>
+            <div class="product-card-content">
+                <h3 class="product-card-name">Apple Vision Pro</h3>
+                <p class="product-card-price">R$ 29.999,00</p>
+                <a href="#" class="btn">Ver Detalhes</a>
+            </div>
+        </div>
+        <div class="product-card" data-price="9299.00" data-order="4">
+            <div class="product-card-img"><img src="./images/iphone.png" alt="iPhone 15 Pro" /></div>
+            <div class="product-card-content">
+                <h3 class="product-card-name">iPhone 15 Pro</h3>
+                <p class="product-card-price">R$ 9.299,00</p>
+                <a href="#" class="btn">Ver Detalhes</a>
+            </div>
+        </div>
+        <div class="product-card" data-price="59.90" data-order="5">
+            <div class="product-card-img"><img src="./images/KZ PNG.png" alt="KZ EDX Pro" /></div>
+            <div class="product-card-content">
+                <h3 class="product-card-name">Kz Edx Pro - Sem Microfone</h3>
+                <p class="product-card-price">R$ 59,90</p>
+                <a href="#" class="btn">Ver Detalhes</a>
+            </div>
+        </div>
+        <div class="product-card" data-price="109.90" data-order="6">
+            <div class="product-card-img"><img src="./images/KZ PNG (1).png" alt="Carregador Power Bank" /></div>
+            <div class="product-card-content">
+                <h3 class="product-card-name">Carregador Power Bank 10.000mah</h3>
+                <p class="product-card-price">R$ 109,90</p>
+                <a href="#" class="btn">Ver Detalhes</a>
+            </div>
+        </div>
+        <div class="product-card" data-price="29999.00" data-order="7">
+            <div class="product-card-img"><img src="./images/vision-pro.png" alt="Apple Vision Pro" /></div>
+            <div class="product-card-content">
+                <h3 class="product-card-name">Apple Vision Pro</h3>
+                <p class="product-card-price">R$ 29.999,00</p>
+                <a href="#" class="btn">Ver Detalhes</a>
+            </div>
+        </div>
+        <div class="product-card" data-price="9299.00" data-order="8">
+            <div class="product-card-img"><img src="./images/iphone.png" alt="iPhone 15 Pro" /></div>
+            <div class="product-card-content">
+                <h3 class="product-card-name">iPhone 15 Pro</h3>
+                <p class="product-card-price">R$ 9.299,00</p>
+                <a href="#" class="btn">Ver Detalhes</a>
+            </div>
+        </div>
+        <div class="product-card" data-price="59.90" data-order="9">
+            <div class="product-card-img"><img src="./images/KZ PNG.png" alt="KZ EDX Pro" /></div>
+            <div class="product-card-content">
+                <h3 class="product-card-name">Kz Edx Pro - Sem Microfone</h3>
+                <p class="product-card-price">R$ 59,90</p>
+                <a href="#" class="btn">Ver Detalhes</a>
+            </div>
+        </div>
+        <div class="product-card" data-price="109.90" data-order="10">
+            <div class="product-card-img"><img src="./images/KZ PNG (1).png" alt="Carregador Power Bank" /></div>
+            <div class="product-card-content">
+                <h3 class="product-card-name">Carregador Power Bank 10.000mah</h3>
+                <p class="product-card-price">R$ 109,90</p>
+                <a href="#" class="btn">Ver Detalhes</a>
+            </div>
+        </div>
+        <div class="product-card" data-price="29999.00" data-order="11">
+            <div class="product-card-img"><img src="./images/vision-pro.png" alt="Apple Vision Pro" /></div>
+            <div class="product-card-content">
+                <h3 class="product-card-name">Apple Vision Pro</h3>
+                <p class="product-card-price">R$ 29.999,00</p>
+                <a href="#" class="btn">Ver Detalhes</a>
+            </div>
+        </div>
+        <div class="product-card" data-price="9299.00" data-order="12">
+            <div class="product-card-img"><img src="./images/iphone.png" alt="iPhone 15 Pro" /></div>
+            <div class="product-card-content">
+                <h3 class="product-card-name">iPhone 15 Pro</h3>
+                <p class="product-card-price">R$ 9.299,00</p>
+                <a href="#" class="btn">Ver Detalhes</a>
+            </div>
+        </div>
+    </div> 
+</main>
+
+<script src="produtos.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,106 @@
+.contact-container {
+    text-align: center;
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 0 20px;
+    height: calc(100dvh - 200px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-header {
+    margin-bottom: 50px;
+}
+
+.contact-header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    font-family: "Orbitron", sans-serif;
+
+    background: linear-gradient(90deg, #ffffff, #999999, #ffffff);
+    background-size: 200% auto;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: logoText 5s ease-in-out infinite;
+}
+
+.contact-header p {
+    font-size: 1.2rem;
+    color: #cccccc; 
+    line-height: 1.6;
+    max-width: 650px; 
+    margin: 0 auto; 
+}
+
+.contact-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+    align-items: center;
+}
+
+.contact-button {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-family: "Orbitron", sans-serif;
+    border-radius: 12px;
+    
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    
+    transition: all 0.4s ease-in-out;
+}
+
+.contact-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 75%;
+    height: 100%;
+    background: linear-gradient(100deg, transparent 0%, rgba(255, 255, 255, 0.25) 50%, transparent 100%);
+    transform: skewX(-25deg);
+    transition: left 0.7s ease-in-out;
+}
+
+.contact-button i {
+    font-size: 1.8rem;
+    margin-right: 15px;
+    transition: transform 0.4s ease;
+}
+
+.contact-button:hover {
+    transform: translateY(-5px) scale(1.02);
+    color: #ffffff;
+}
+
+.contact-button:hover::before {
+    left: 100%; 
+}
+
+.contact-button:hover i {
+    transform: scale(1.1);
+}
+
+body.products-page {
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%) !important;
+}
+
+@keyframes logoText {
+  0% { background-position: 0% center; }
+  50% { background-position: 100% center; }
+  100% { background-position: 0% center; }
+}

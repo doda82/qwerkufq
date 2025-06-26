@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>D2G TECH</title>
+</head>
+<body>
+  <header>
+    <div class="logo">D2G TECH</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="produtos.html" class="desktop-only">Produtos</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="tech-circle">
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+    </div>
+
+    <div class="list">
+      <div class="item active">
+        <div class="product-img">
+          <img src="./images/apple-watch.png" alt="Apple Watch" />
+        </div>
+        <div class="content">
+          <p class="product-tag">Lançamento</p>
+          <p class="product-name">Explore o futuro com estilo</p>
+          <p class="description">
+            D2G Tech chegou para transformar seu dia! Produtos modernos e confiáveis que acompanham seu estilo. Explore e viva o futuro da tecnologia!
+          </p>
+          <a href="produtos.html" class="btn desktop-only">Produtos</a>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="product-img">
+          <img src="./images/air-pods.png" alt="Air Pods" />
+        </div>
+        <div class="content">
+          <p class="product-tag">Destaque</p>
+          <p class="product-name">Potência no seu ritmo diário</p>
+          <p class="description">
+            Soluções tecnológicas que acompanham seu ritmo. Conheça o novo padrão em conectividade, design e inovação com a D2G Tech.
+          </p>
+          <a href="produtos.html" class="btn desktop-only">Produtos</a>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="product-img">
+          <img src="./images/vision-pro.png" alt="Vision Pro" />
+        </div>
+        <div class="content">
+          <p class="product-tag">Novidade</p>
+          <p class="product-name">Conecte-se com inovação</p>
+          <p class="description">
+            Na D2G Tech você encontra as últimas tendências em tecnologia. Itens inteligentes e funcionais para deixar sua vida mais conectada.
+          </p>
+          <a href="produtos.html" class="btn desktop-only">Produtos</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="arrows desktop-only">
+      <button class="arrow-btn" id="prev">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fff" class="bi bi-caret-left-fill" viewBox="0 0 16 16">
+          <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z" />
+        </svg>
+      </button>
+      <button class="arrow-btn" id="next">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fff" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+          <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+        </svg>
+      </button>
+    </div>
+
+    <div class="indicators">
+      <div class="numbers desktop-only">01</div>
+      <div class="dots">
+        <div class="dot active"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+    </div>
+  </main>
+
+  <script src="./scripts.js"></script>
+</body>
+</html>
