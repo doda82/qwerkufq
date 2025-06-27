@@ -14,14 +14,29 @@
 <body>
   <header>
     <div class="logo">D2G TECH</div>
-    <nav>
+    <button id="menu-toggle" class="menu-toggle-btn" aria-label="Abrir menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+    <nav class="desktop-nav">
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="produtos.html" class="desktop-only">Produtos</a></li>
+        <li class="active-nav"><a href="index.html">Home</a></li>
+        <li><a href="produtos.html">Produtos</a></li>
         <li><a href="contato.html">Contato</a></li>
       </ul>
     </nav>
   </header>
+
+  <div id="mobile-menu" class="mobile-menu-container">
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="produtos.html">Produtos</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </div>
 
   <main class="container">
     <div class="tech-circle">
@@ -98,6 +113,6 @@
     </div>
   </main>
 
-  <script src="./scripts.js"></script>
+  <script src="scripts.js"></script>
 </body>
 </html>
