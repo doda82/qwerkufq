@@ -1,47 +1,47 @@
 document.addEventListener('DOMContentLoaded', () => {
-    console.log("DEBUG: Página carregada. O script produtos.js iniciou.");
-
     const seletorOrdenacao = document.getElementById('ordenar-produtos');
+    const campoBusca = document.getElementById('input-busca');
     const container = document.querySelector('.products-grid');
+    const todosOsProdutos = Array.from(container.querySelectorAll('.product-card'));
 
-    if (!seletorOrdenacao || !container) {
-        console.error("DEBUG: ERRO CRÍTICO - Não foi possível encontrar o seletor ou o container. Verifique o HTML.");
-        return; 
+    function filtrarProdutos() {
+        const termoPesquisado = campoBusca.value.toLowerCase();
+
+        todosOsProdutos.forEach(produto => {
+            const nomeDoProduto = produto.querySelector('.product-card-name').textContent.toLowerCase();
+
+            const deveMostrar = nomeDoProduto.includes(termoPesquisado);
+
+            produto.style.display = deveMostrar ? 'flex' : 'none';
+        });
+
+        ordenarProdutos(); // Reorganiza os visíveis
     }
-    console.log("DEBUG: Seletor de ordenação e container de produtos encontrados com sucesso.");
 
-    seletorOrdenacao.addEventListener('change', () => {
-        console.log("--- NOVO EVENTO DE ORDENAÇÃO ---");
+    function ordenarProdutos() {
         const ordem = seletorOrdenacao.value;
-        console.log(`DEBUG: Opção escolhida pelo usuário: '${ordem}'`);
+        const produtosVisiveis = todosOsProdutos.filter(p => p.style.display !== 'none');
 
-        const produtosParaOrdenar = Array.from(container.querySelectorAll('.product-card'));
-        console.log("DEBUG: Ordem dos produtos ANTES de ordenar (pelo data-order):", produtosParaOrdenar.map(p => p.dataset.order));
+        produtosVisiveis.sort((a, b) => {
+            const valorA = parseFloat(a.dataset.price);
+            const valorB = parseFloat(b.dataset.price);
 
-        produtosParaOrdenar.sort((a, b) => {
-            let valorA, valorB;
+            if (ordem === 'menor-preco') return valorA - valorB;
+            if (ordem === 'maior-preco') return valorB - valorA;
 
-            if (ordem === 'menor-preco' || ordem === 'maior-preco') {
-                valorA = parseFloat(a.dataset.price);
-                valorB = parseFloat(b.dataset.price);
-            } else {
-                valorA = parseInt(a.dataset.order);
-                valorB = parseInt(b.dataset.order);
-            }
-            
-            if (ordem === 'maior-preco') {
-                return valorB - valorA; 
-            }
-            return valorA - valorB; 
+            // ordem padrão
+            return parseInt(a.dataset.order) - parseInt(b.dataset.order);
         });
 
-        console.log("DEBUG: Ordem dos produtos DEPOIS de ordenar (pelo data-order):", produtosParaOrdenar.map(p => p.dataset.order));
-        
-        console.log("DEBUG: Limpando o container e redesenhando os produtos na nova ordem.");
-        container.innerHTML = '';
-        produtosParaOrdenar.forEach(produto => {
-            container.appendChild(produto);
-        });
-        console.log("--- FIM DO EVENTO DE ORDENAÇÃO ---");
-    });
+        // Reinsere apenas os visíveis ordenados
+        produtosVisiveis.forEach(produto => container.appendChild(produto));
+    }
+
+    if (seletorOrdenacao && campoBusca && container) {
+        campoBusca.addEventListener('input', filtrarProdutos);
+        seletorOrdenacao.addEventListener('change', ordenarProdutos);
+        ordenarProdutos(); // inicial
+    } else {
+        console.error('⚠️ Elementos de filtro ou ordenação não foram encontrados no HTML.');
+    }
 });
